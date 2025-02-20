@@ -1,0 +1,33 @@
+<movies>
+    <movie>
+        <title>The Godfather</title>
+
+        <year>1972</year>
+
+        <genre>Drama, Crime</genre>
+
+        <director>Francis Ford Coppola</director>
+
+        <summary>Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.</summary>
+
+        <poster>https://image.tmdb.org/t/p/w600_and_h900_bestv2/3bhkrj58Vtu7enYsRolD1fZdja1.jpg</poster>
+
+    </movie>
+
+    <movie>
+        <title>Venom: The Last Dance</title>
+
+        <year>2024</year>
+
+        <genre>Action, Science Fiction, Adventure
+</genre>
+
+        <director>Kelly Marcel</director>
+
+        <summary>Eddie and Venom are on the run. Hunted by both of their worlds and with the net closing in, the duo are forced into a devastating decision that will bring the curtains down on Venom and Eddie's last dance.</summary>
+
+        <poster>https://image.tmdb.org/t/p/w600_and_h900_bestv2/vGXptEdgZIhPg3cGlc7e8sNPC2e.jpg</poster>
+
+    </movie>
+
+</movies>

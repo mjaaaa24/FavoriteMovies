@@ -1,0 +1,144 @@
+/* Variables */
+:root {
+    --itemGrow: 1.2;
+    --duration: 250ms;
+    --itemWidth: 200px; /* Limit the width of each item */
+    --itemHeight: 300px; /* Limit the height of each item */
+    --posterHeight: 180px; /* Height for movie poster */
+    --posterWidth: 100%; /* Make poster fit width */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #000;
+}
+
+h1 {
+    font-family: Arial;
+    color: red;
+    text-align: center;
+}
+
+.wrapper {
+    display: flex; /* Change to flex for horizontal scrolling */
+    width: 100%;
+    overflow-x: auto; /* Allow horizontal scroll */
+    padding: 20px;
+    gap: 10px; /* Space between items */
+    position: relative;
+}
+
+.wrapper section {
+    display: flex;
+    gap: 10px; /* Space between items inside section */
+    scroll-snap-type: x mandatory; /* Snap to the next item */
+    width: 100vw;
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.wrapper section .item {
+    flex: 1;
+    transition: var(--duration) all;
+    background-color: #111; /* Dark background for item */
+    border-radius: 10px;
+    overflow: hidden; /* Hide content overflow */
+    text-align: center;
+    position: relative;
+    scroll-snap-align: start; /* Ensure items snap to position */
+}
+
+.wrapper section .item:hover {
+    margin: 0 40px; /* Create a hover effect by increasing margin */
+    transform: scale(var(--itemGrow)); /* Enlarge on hover */
+}
+
+.wrapper section .item img {
+    width: var(--posterWidth); /* Make the image fill the item width */
+    height: var(--posterHeight);
+    object-fit: cover; /* Ensure the image covers the area without stretching */
+    border-radius: 5px;
+}
+
+.wrapper section .item h2,
+.wrapper section .item p {
+    margin: 10px 0;
+    color: white;
+    font-size: 14px;
+}
+
+.wrapper section .item h2 {
+    font-size: 16px; /* Movie title size */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* Truncate the title */
+}
+
+.wrapper section .item p {
+    font-size: 12px; /* Smaller summary text */
+    height: 60px; /* Limit height for the summary */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Truncate if text overflows */
+}
+
+/* Arrow Buttons */
+.wrapper section a {
+    position: absolute;
+    
+    color: #fff;
+    text-decoration: none;
+    font-size: 6em;
+    background: rgb(0, 0, 0);
+    width: 80px;
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+}
+
+.wrapper section a:nth-of-type(1) {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+.wrapper section a:nth-of-type(2) {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+/* Remove the arrow for Mobile */
+@media only screen and (max-width: 600px) {
+    a.arrow__btn {
+        display: none;
+    }
+
+    .wrapper {
+        padding: 10px; /* Adjust padding for small screens */
+        gap: 5px; /* Reduce gap between items */
+    }
+
+    .wrapper section .item {
+        width: 150px; /* Make items smaller on mobile */
+        height: 250px; /* Adjust item height */
+    }
+
+    .wrapper section .item img {
+        height: 150px; /* Adjust image height on mobile */
+    }
+
+    .wrapper section .item h2 {
+        font-size: 14px; /* Smaller title font on mobile */
+    }
+
+    .wrapper section .item p {
+        font-size: 12px; /* Smaller summary font on mobile */
+    }
+}
