@@ -1,144 +1,163 @@
-/* Variables */
-:root {
-    --itemGrow: 1.2;
-    --duration: 250ms;
-    --itemWidth: 200px; /* Limit the width of each item */
-    --itemHeight: 300px; /* Limit the height of each item */
-    --posterHeight: 180px; /* Height for movie poster */
-    --posterWidth: 100%; /* Make poster fit width */
+body, html {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  color: white; /* Ensures text remains visible */
 }
 
-html {
-    scroll-behavior: smooth;
+.bg-image {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 400px; /* Adjust height as needed */
 }
 
-body {
-    margin: 0;
-    background-color: #000;
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Adjust transparency if needed */
 }
 
-h1 {
-    font-family: Arial;
-    color: red;
-    text-align: center;
+
+.card {
+  margin: 0 0.5em;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  border: none;
 }
 
-.wrapper {
-    display: flex; /* Change to flex for horizontal scrolling */
-    width: 100%;
-    overflow-x: auto; /* Allow horizontal scroll */
-    padding: 20px;
-    gap: 10px; /* Space between items */
-    position: relative;
+.carousel-container {
+  position: relative;
+  width: 100vw; /* Full viewport width */
+  margin: 0; /* Remove any auto margins */
+  overflow: hidden;
+  padding: 0; /* Remove any padding */
 }
 
-.wrapper section {
-    display: flex;
-    gap: 10px; /* Space between items inside section */
-    scroll-snap-type: x mandatory; /* Snap to the next item */
-    width: 100vw;
-    position: relative;
-    padding-top: 25px;
-    padding-bottom: 25px;
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%; /* Ensure full width */
 }
 
-.wrapper section .item {
-    flex: 1;
-    transition: var(--duration) all;
-    background-color: #111; /* Dark background for item */
-    border-radius: 10px;
-    overflow: hidden; /* Hide content overflow */
-    text-align: center;
-    position: relative;
-    scroll-snap-align: start; /* Ensure items snap to position */
+.movie-item {
+  flex: 0 0 20%; /* Adjust for the number of visible items */
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  background-color: #222;
 }
 
-.wrapper section .item:hover {
-    margin: 0 40px; /* Create a hover effect by increasing margin */
-    transform: scale(var(--itemGrow)); /* Enlarge on hover */
+.movie-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
-.wrapper section .item img {
-    width: var(--posterWidth); /* Make the image fill the item width */
-    height: var(--posterHeight);
-    object-fit: cover; /* Ensure the image covers the area without stretching */
-    border-radius: 5px;
+button.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 100;
 }
 
-.wrapper section .item h2,
-.wrapper section .item p {
-    margin: 10px 0;
-    color: white;
-    font-size: 14px;
+button.prev {
+  left: 0;
 }
 
-.wrapper section .item h2 {
-    font-size: 16px; /* Movie title size */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap; /* Truncate the title */
+button.next {
+  right: 0;
 }
 
-.wrapper section .item p {
-    font-size: 12px; /* Smaller summary text */
-    height: 60px; /* Limit height for the summary */
-    overflow: hidden;
-    text-overflow: ellipsis; /* Truncate if text overflows */
+button:hover {
+  background-color: rgba(0, 0, 0, 0.516);
 }
 
-/* Arrow Buttons */
-.wrapper section a {
-    position: absolute;
-    
-    color: #fff;
-    text-decoration: none;
-    font-size: 6em;
-    background: rgb(0, 0, 0);
-    width: 80px;
-    padding: 20px;
-    text-align: center;
-    z-index: 1;
+/* Netflix-style Red Button */
+.get-started-btn {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
 }
 
-.wrapper section a:nth-of-type(1) {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+/* Darker red on hover */
+.get-started-btn:hover {
+  background-color: darkred;
 }
 
-.wrapper section a:nth-of-type(2) {
-    top: 0;
-    bottom: 0;
-    right: 0;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+
+
+
+/* Netflix Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  z-index: 1000;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
 }
 
-/* Remove the arrow for Mobile */
-@media only screen and (max-width: 600px) {
-    a.arrow__btn {
-        display: none;
-    }
+/* Netflix Scroll Effect */
+.navbar.scrolled {
+  background-color: black;
+}
 
-    .wrapper {
-        padding: 10px; /* Adjust padding for small screens */
-        gap: 5px; /* Reduce gap between items */
-    }
+/* Logo */
+.logo {
+  height: 40px;
+}
 
-    .wrapper section .item {
-        width: 150px; /* Make items smaller on mobile */
-        height: 250px; /* Adjust item height */
-    }
+/* Buttons */
+.nav-right {
+  display: flex;
+  gap: 10px;
+}
 
-    .wrapper section .item img {
-        height: 150px; /* Adjust image height on mobile */
-    }
+.nav-btn {
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
 
-    .wrapper section .item h2 {
-        font-size: 14px; /* Smaller title font on mobile */
-    }
+.login {
+  background-color: transparent;
+  color: white;
+}
 
-    .wrapper section .item p {
-        font-size: 12px; /* Smaller summary font on mobile */
-    }
+.login:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.signup {
+  background-color: red;
+  color: white;
+}
+
+.signup:hover {
+  background-color: darkred;
 }

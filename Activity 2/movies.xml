@@ -1,0 +1,137 @@
+<movies>
+    <movie>
+        <title>The Godfather</title>
+
+        <year>1972</year>
+
+        <genre>Drama, Crime</genre>
+
+        <director>Francis Ford Coppola</director>
+
+        <summary>Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.</summary>
+
+        <poster>https://image.tmdb.org/t/p/w600_and_h900_bestv2/3bhkrj58Vtu7enYsRolD1fZdja1.jpg</poster>
+
+    </movie>
+
+    <movie>
+        <title>Venom: The Last Dance</title>
+
+        <year>2024</year>
+
+        <genre>Action, Science Fiction, Adventure</genre>
+
+        <director>Kelly Marcel</director>
+
+        <summary>Eddie and Venom are on the run. Hunted by both of their worlds and with the net closing in, the duo are forced into a devastating decision that will bring the curtains down on Venom and Eddie's last dance.</summary>
+
+        <poster>https://image.tmdb.org/t/p/w600_and_h900_bestv2/vGXptEdgZIhPg3cGlc7e8sNPC2e.jpg</poster>
+
+    </movie>
+
+    <movie>
+        <title>Invincible</title>
+
+        <year>2021</year>
+
+        <genre>Animation, Sci-Fi, Fantasy, Action, Adventure, Drama</genre>
+
+        <director>Robert Kirkman, Ryan Ottley, Cory Walker.</director>
+
+        <summary>Mark Grayson is a normal teenager except for the fact that his father is the most powerful superhero on the planet. Shortly after his seventeenth birthday, Mark begins to develop powers of his own and enters into his father’s tutelage.</summary>
+
+        <poster>https://image.tmdb.org/t/p/w1280/jBn4LWlgdsf6xIUYhYBwpctBVsj.jpg</poster>
+
+    </movie>
+
+    <movie>
+        <title>The Gorge</title>
+
+        <year>2025</year>
+
+        <genre>Romance, Science Fiction, Thriller</genre>
+
+        <director>Scott Derrickson</director>
+
+        <summary>Two highly trained operatives grow close from a distance after being sent to guard opposite sides of a mysterious gorge. When an evil below emerges, they must work together to survive what lies within.</summary>
+
+        <poster>https://image.tmdb.org/t/p/w1280/7iMBZzVZtG0oBug4TfqDb9ZxAOa.jpg</poster>
+
+    </movie>
+
+    <movie>
+        <title>Deadpool &amp; Wolverine</title>
+
+        <year>2024</year>
+
+        <genre>Action, Comedy, Science Fiction</genre>
+
+        <director>Shawn Levy</director>
+
+        <summary>A listless Wade Wilson toils away in civilian life with his days as the morally flexible mercenary, Deadpool, behind him. But when his homeworld faces an existential threat, Wade must reluctantly suit-up again with an even more reluctant Wolverine.</summary>
+
+        <poster>https://image.tmdb.org/t/p/w1280/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg</poster>
+
+    </movie>
+
+    <movie>
+        <title>The Lord of the Rings: The Return of the King</title>
+
+        <year>2003</year>
+
+        <genre>Adventure, Fantasy, Action</genre>
+
+        <director>Peter Jackson</director>
+
+        <summary>As armies mass for a final battle that will decide the fate of the world--and powerful, ancient forces of Light and Dark compete to determine the outcome--one member of the Fellowship of the Ring is revealed as the noble heir to the throne of the Kings of Men. Yet, the sole hope for triumph over evil lies with a brave hobbit, Frodo, who, accompanied by his loyal friend Sam and the hideous, wretched Gollum, ventures deep into the very dark heart of Mordor on his seemingly impossible quest to destroy the Ring of Power.​</summary>
+
+        <poster>https://image.tmdb.org/t/p/w1280/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg</poster>
+
+    </movie>
+
+    <movie>
+        <title>The Dark Knight</title>
+
+        <year>2008</year>
+
+        <genre>Drama, Action, Crime, Thriller</genre>
+
+        <director>Christopher Nolan</director>
+
+        <summary>Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker.​</summary>
+
+        <poster>https://image.tmdb.org/t/p/w1280/qJ2tW6WMUDux911r6m7haRef0WH.jpg</poster>
+
+    </movie>
+
+    <movie>
+        <title>The Lion King</title>
+
+        <year>1994</year>
+
+        <genre>Family, Animation, Drama</genre>
+
+        <director>Rob Minkoff</director>
+
+        <summary>Young lion prince Simba, eager to one day become king of the Pride Lands, grows up under the watchful eye of his father Mufasa; all the while his villainous uncle Scar conspires to take the throne for himself. Amid betrayal and tragedy, Simba must confront his past and find his rightful place in the Circle of Life.​</summary>
+
+        <poster>https://image.tmdb.org/t/p/w1280/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg</poster>
+
+    </movie>
+
+    <movie>
+        <title>Avengers: Infinity War</title>
+
+        <year>2018</year>
+
+        <genre>Adventure, Action, Science Fiction</genre>
+
+        <director>Joe Russo</director>
+
+        <summary>As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.​</summary>
+
+        <poster>https://image.tmdb.org/t/p/w1280/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg</poster>
+
+    </movie>
+
+</movies>
